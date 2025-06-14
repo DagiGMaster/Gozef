@@ -1,0 +1,31 @@
+﻿.header {
+    position: relative; /* for absolute child positioning */
+    width: 100%;
+    display: block;    
+    background: transparent;
+}
+
+    .header .container {
+        width: 100%;
+        display: flex;
+        padding: 4rem 0;
+        position: relative;
+        align-items:center;
+    }
+
+        .header .container .logo {
+            width: 20%;            
+            z-index: 2;
+            padding: 0;
+        }
+        .header .container .logo img{
+            width: 45%;            
+        }
+        .header .container .navbar {
+            width: 35%;            
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+        }

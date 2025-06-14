@@ -1,0 +1,26 @@
+﻿@* _Layout.cshtml *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InterBuzz</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+    <link rel="stylesheet" href="~/css/nav.css" />
+    <link rel="stylesheet" href="~/css/common.css" />
+    @RenderSection("Styles", required: false)
+    @* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+    <script src="~/js/site.js"></script>
+    <script src="~/js/home.js"></script>
+</head>
+<body>    
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    @await Html.PartialAsync("~/Views/Partials/CTA/_PreFooter.cshtml")
+    @await Html.PartialAsync("~/Views/Partials/Footer/_Footer.cshtml")
+</body>
+</html>

@@ -1,0 +1,240 @@
+﻿@* Index.cshtml *@
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["ButtonText"] = "We Are Here For You";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" />
+}
+<section class="hero-wrapper">
+    @await Html.PartialAsync("~/Views/Partials/Header/_Header.cshtml")
+    <div class="hero">
+        <div class="hero-text">
+            <span class="hero-badge fade-up">Welcome to the Future of Business Technology</span>
+            <h1 class="fade-up">
+                AI Services & Software Solutions<br />
+            </h1>
+            <span class="fade-up gradient-text">for Modern Businesses</span>
+            <div class="inner-text">
+                <p>
+                    Gozef provides cutting-edge software solutions, automation services, and AI-powered tools for businesses across all industries. Based in Austin, Texas, we specialize in custom software development, outsourcing services, and innovative SEO strategies powered by artificial intelligence.
+                </p>
+                <p>
+                    We create custom-tailored solutions that combine advanced automation, smart AI integration, and precise development. Our services include software development, business automation, AI tools implementation, AEO (AI-powered SEO), and comprehensive outsourcing solutions designed to accelerate your business growth.
+                </p>
+            </div>
+            @{
+                ViewData["ButtonText"] = "Contact Us";
+            }
+            @await Html.PartialAsync("~/Views/Partials/CTA/_CTA_Btn.cshtml", ViewData)
+        </div>
+        <img class="vector-item" src="/img/Vector1.png" />
+        <div class="hero-img fade-up"><img src="/img/Hero_image.png" alt="Team Working" /></div>
+    </div>
+</section>
+<section class="clients">
+    <div class="clients-title">
+        <h2>Our <span style="font-weight:700">Selected Clients</span></h2>
+    </div>
+    <div class="clients-carousel-wrapper fade-up" style="position: relative;">
+        <canvas id="beadsCanvas"></canvas>
+        <div class="logo-fade-container">
+            <div class="logo-fade-grid" id="logoFadeGrid">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="container fade-up">
+        <div class="row">
+            <div class="col home-area1-s2">
+                <img src="~/img/ImageBanner.png" alt="About Image" />
+            </div>
+            <div class="col home-area1-s1">
+                <div class="content home-banner-content-left">
+                    <div class="section-badge">Who We Are</div>
+                    <h2 class="main-title">Austin's Premier Software and AI Solutions Provider</h2>
+                    <p class="p-txt">
+                        Gozef is a cutting-edge technology company based in Austin, Texas, specializing in software automation, AI integration, and business optimization solutions. We combine innovative technology with practical business applications to deliver measurable results for our clients across various industries.
+                    </p>
+                    <div class="main-btn-about">
+                        @{
+                            ViewData["ButtonText"] = "About Us";
+                        }
+                        @await Html.PartialAsync("~/Views/Partials/CTA/_CTA_Btn.cshtml", ViewData)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats fade-up">
+    <div class="container home-Satisfaction-bar">
+        <div class="row">
+            <div class="col">
+                <h2 class="home-satisfaction-h2">500+</h2>
+                <p class="home-satisfaction-p1">Satisfied Clients</p>
+            </div>
+            <div class="col">
+                <h2 class="home-satisfaction-h2">97%</h2>
+                <p class="home-satisfaction-p1">Clients Who Rate Us Highly</p>
+            </div>
+            <div class="col">
+                <h2 class="home-satisfaction-h2">1,500+</h2>
+                <p class="home-satisfaction-p1">Daily Leads for Our Clients</p>
+            </div>
+            <div class="col">
+                <h2 class="home-satisfaction-h2">60%</h2>
+                <p class="home-satisfaction-p1">Our Annual Growth Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="services-container">
+        <!-- Left Side -->
+        <div class="services-left">
+            <button class="section-badge">Solutions</button>
+            <h2 class="main-title">Our Core Services</h2>
+            <p class="description">
+                Gozef delivers comprehensive technology solutions from our Austin headquarters, serving businesses nationwide. We specialize in four key areas: software development and automation, professional outsourcing services, AI tools and implementation, and advanced AEO (AI-powered SEO) strategies. Our integrated approach ensures maximum efficiency and measurable results for every project.
+            </p>
+            <div class="main-btn-services">
+                @{
+                    ViewData["ButtonText"] = "Our Services";
+                }
+                @await Html.PartialAsync("~/Views/Partials/CTA/_CTA_Btn.cshtml", ViewData)
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="services-right">
+            <div class="service-card fade-from-top">
+                <div class="card-inner">
+                    <img src="~/img/icons/MaskGroupAEO.png" alt="AEO icon">
+                    <h3>AEO – AI-Powered SEO for Maximum Visibility</h3>
+                    <p>AEO (Answer Engine Optimization) represents the evolution of SEO through artificial intelligence. Our AI-powered approach analyzes user intent, optimizes for voice search, and positions your content to appear in AI-driven search results, chatbots, and answer engines. Get discovered exactly when your customers are looking for solutions.</p>
+                </div>
+            </div>
+            <div class="service-card fade-from-left">
+                <img src="~/img/icons/Mask groupAnalytics.png" alt="Software icon">
+                <h3>Custom Software Development & Automation</h3>
+                <p>We build tailored software solutions that automate your business processes and drive efficiency. From custom applications to workflow automation systems, our development team creates scalable, secure, and user-friendly solutions that grow with your business and eliminate manual bottlenecks.</p>
+            </div>
+            <div class="service-card fade-from-bottom">
+                <img src="~/img/icons/MaskGroupOutSourcing.png" alt="Outsourcing icon">
+                <h3>Professional Outsourcing Services</h3>
+                <p>Scale your operations with our comprehensive outsourcing solutions. Whether you need development teams, technical support, or specialized project execution, we provide skilled professionals who integrate seamlessly with your workflow, delivering quality results while reducing operational costs.</p>
+            </div>
+            <div class="service-card fade-from-left">
+                <img src="~/img/icons/MaskgroupAITools.png" alt="AI tools icon">
+                <h3>AI Tools & Business Intelligence Solutions</h3>
+                <p>Transform your business with intelligent AI tools designed for real-world applications. From predictive analytics and automated decision-making to customer behavior analysis and process optimization, our AI solutions provide actionable insights that drive growth and competitive advantage.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="projects-header fade-up">
+            <h2 class="main-title">Our Success Stories</h2>
+            <p class="description">
+                Explore how Gozef has transformed businesses through innovative software solutions, AI implementation, and strategic automation. Each project showcases our commitment to delivering measurable results and cutting-edge technology solutions that drive real business growth.
+            </p>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="projects-grid">
+            <div class="project-item fade-up">
+                <img src="~/img/project1.png" alt="Project 1" />
+                <p class="project-category">AI Tools & Automation</p>
+                <h3 class="project-title">AI-Powered Business Automation: Streamlining Operations for Maximum Efficiency</h3>
+            </div>
+            <div class="project-item fade-up">
+                <img src="~/img/project2.png" alt="Project 2" />
+                <p class="project-category">Custom Software Development</p>
+                <h3 class="project-title">Enterprise Software Solutions: Building Scalable Systems for Growing Businesses</h3>
+            </div>
+            <div class="project-item fade-up">
+                <img src="~/img/project3.png" alt="Project 3" />
+                <p class="project-category">AEO & AI-Powered SEO</p>
+                <h3 class="project-title">Next-Generation SEO: AI-Driven Visibility That Understands Your Customers</h3>
+            </div>
+            <div class="project-item fade-up">
+                <img src="~/img/project4.png" alt="Project 4" />
+                <p class="project-category">Outsourcing Solutions</p>
+                <h3 class="project-title">Strategic Outsourcing: Expert Teams Ready to Scale Your Operations</h3>
+            </div>
+        </div>
+
+        @{
+            ViewData["ButtonText"] = "View Our Projects";
+        }
+        @await Html.PartialAsync("~/Views/Partials/CTA/_CTA_Btn.cshtml", ViewData)
+    </div>
+</section>
+
+
+<section class="testimonials">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="testimonials-header fade-up">
+            <h2 class="main-title">
+                What Our Clients Say
+            </h2>
+            <p class="description">
+                Our clients' success stories speak to the quality and impact of our services. We're proud to partner with businesses across industries, helping them leverage technology to achieve their goals through innovative software solutions, AI implementation, and strategic automation.
+            </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <p>
+                    "Gozef transformed our entire workflow with their custom automation solution. What used to take our team hours now happens automatically, and the AI insights have helped us make better business decisions. The Austin team understood our fintech requirements perfectly and delivered a solution that exceeded our expectations. The implementation was smooth, and their ongoing support has been exceptional."
+                </p>
+                <div class="testimonial-footer">
+                    <img src="~/img/profile-pic-1.png" alt="User" />
+                    <div>
+                        <strong>Sarah Chen</strong><br />
+                        <span>VP of Operations, TechFlow Solutions</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-up">
+                <p>
+                    "Working with Gozef's outsourcing team has been a game-changer for our agency. They provided skilled developers who integrated seamlessly with our existing processes. The quality of work is consistently high, and they've helped us scale efficiently while maintaining our standards. Their AEO services have also significantly improved our clients' search visibility."
+                </p>
+                <div class="testimonial-footer">
+                    <img src="~/img/profile-pic-2.png" alt="User" />
+                    <div>
+                        <strong>Michael Rodriguez</strong><br />
+                        <span>Founder, Digital Marketing Agency</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-up">
+                <p>
+                    "The AI tools Gozef developed for our business have revolutionized how we analyze customer data and predict market trends. Their team in Austin brought both technical expertise and business acumen to the project. The software they built is robust, secure, and has given us a significant competitive advantage in our industry."
+                </p>
+                <div class="testimonial-footer">
+                    <img src="~/img/profile-pic-3.png" alt="User" />
+                    <div>
+                        <strong>David Thompson</strong><br />
+                        <span>CTO, Austin Tech Startup</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
