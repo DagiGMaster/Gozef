@@ -106,13 +106,19 @@ function initHomePage() {
 document.addEventListener('DOMContentLoaded', initHomePage);
 document.addEventListener('DOMContentLoaded', () => {
     const logos = [
-        "/img/our_clients/5stars.png",
-        "/img/our_clients/afcon-logo.svg",
-        "/img/our_clients/electra_logo.png",
-        "/img/our_clients/givatayim.png",
-        "/img/our_clients/haifa.svg",
-        "/img/our_clients/holon.png",
-        "/img/our_clients/netanya_logo.webp"
+        "/img/our_clients/HPI_logo.png",
+        "/img/our_clients/kam_logo.png",
+        "/img/our_clients/kam2_logo.png",
+        "/img/our_clients/kiromic_logo.png",
+        "/img/our_clients/lexpharma_logo.png",
+        "/img/our_clients/Master_logo.png",
+        "/img/our_clients/mati_Logo.png",
+        "/img/our_clients/memgen_logo.png",
+        "/img/our_clients/mob_logo.png",
+        "/img/our_clients/mogas_logo.png",
+        "/img/our_clients/OCIW_logo.png",
+        "/img/our_clients/p_logo.png",
+        "/img/our_clients/travardi_logo.png"
     ];
 
     const grid = document.getElementById('logoFadeGrid');
@@ -126,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.innerHTML = ''; // remove current logos
 
             // Inject 4 logos
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 6; i++) {
                 const img = document.createElement('img');
                 img.src = logos[(index + i) % logos.length];
                 grid.appendChild(img);
@@ -134,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show new
             grid.classList.add('show');
-            index = (index + 4) % logos.length;
+            index = (index + 6) % logos.length;
         }, 800); // match fade out time
     }
 

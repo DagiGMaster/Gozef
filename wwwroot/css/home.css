@@ -145,20 +145,20 @@
 }
 
 .logo-fade-container {
-    width: 750px;
+    width: 1150px;
     height: 500px;
     margin: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff6f0;
+    background: white;
     border-radius: 25px;
 }
 
 .logo-fade-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
     width: 100%;
